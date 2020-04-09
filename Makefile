@@ -13,7 +13,7 @@ clean:
 
 test:
 	export GOFLAGS=-mod=vendor
-	go test ./...
+	go test -race ./...
 
 lint:
 	golangci-lint run --enable-all --timeout 5m
