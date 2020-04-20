@@ -25,14 +25,15 @@ func TestInSlice(t *testing.T) {
 			there:  []string{"foo", "bar"},
 		},
 	}
+
 	for _, table := range tables {
 		err := InSlice(table.needs, table.there)
+
 		if table.errors {
 			assert.NotNil(err)
 			assert.EqualError(err, fmt.Sprintf("%q item not in slice", table.needs[0]))
 		} else if !table.errors {
 			assert.Nil(err)
 		}
-
 	}
 }

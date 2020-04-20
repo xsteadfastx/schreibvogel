@@ -70,7 +70,7 @@ func NewMast(server, clientID, clientSecret, username, password string) POSSEr {
 	return p
 }
 
-func Syndicate() {
+func Syndicate(config string) {
 	// needEnvs := []string{"a"}
 	// envs := os.Environ()
 	log.Info("running syndication...")

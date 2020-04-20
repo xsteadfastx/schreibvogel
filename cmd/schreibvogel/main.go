@@ -33,9 +33,11 @@ func main() {
 		log.Fatal("Usage: schreibvogel syndicate CONFIG")
 	}
 
+	config := args[2]
+
 	switch {
 	case args[1] == "syndicate":
-		schreibvogel.Syndicate()
+		schreibvogel.Syndicate(config)
 	default:
 		log.Fatal("nothing to do")
 	}
